@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default: Dark Mode */
+  --bg: #0A0E14;
+  --fg: #F8F9FA;
+  --accent: #10B981;
+  --accent-hover: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.45);
+  --accent-light: rgba(16, 185, 129, 0.12);
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-elevated: rgba(255, 255, 255, 0.06);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-hover: rgba(255, 255, 255, 0.1);
+  --muted: #1F2937;
+  --muted-fg: #9CA3AF;
+  --badge-bg: rgba(16, 185, 129, 0.08);
+  --dot-color: rgba(255, 255, 255, 0.18);
+  --dot-accent: rgba(16, 185, 129, 0.7);
+  --card-glow: 0 0 40px -10px rgba(16, 185, 129, 0.15);
+  --cursor-blend: difference;
+}
+
+[data-theme="light"] {
+  --bg: #F8F9FA;
+  --fg: #0A0E14;
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-glow: rgba(5, 150, 105, 0.35);
+  --accent-light: rgba(5, 150, 105, 0.1);
+  --surface: rgba(0, 0, 0, 0.03);
+  --surface-elevated: rgba(0, 0, 0, 0.05);
+  --surface-border: rgba(0, 0, 0, 0.08);
+  --surface-hover: rgba(0, 0, 0, 0.08);
+  --muted: #E5E7EB;
+  --muted-fg: #4B5563;
+  --badge-bg: rgba(5, 150, 105, 0.08);
+  --dot-color: rgba(0, 0, 0, 0.15);
+  --dot-accent: rgba(5, 150, 105, 0.7);
+  --card-glow: 0 0 40px -10px rgba(5, 150, 105, 0.12);
+  --cursor-blend: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto !important; /* Lenis takes care of smooth scroll */
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: default;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Glassmorphic Panel Styles */
+.glass-panel {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--surface-border);
+}
+
+.glass-panel-elevated {
+  background: var(--surface-elevated);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--surface-border);
+  box-shadow: var(--card-glow);
+}
+
+/* Animated Glowing Accent Text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--fg) 20%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SVG Line Drawing & Pulse utilities */
+.bracket-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawBracket 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawBracket {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Hide native cursor when custom cursor is active on non-touch */
+@media (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea {
+    cursor: none !important;
+  }
+}
+
+/* Lenis Scroll reset helper */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
