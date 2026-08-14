@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Terminal, ArrowUpRight, Menu, X } from 'lucide-react';
+import { Sun, Moon, Terminal, ArrowUpRight, Menu, X, Github, Linkedin, Palette } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
-  const { isDark, toggleTheme } = useTheme();
+  const { isDark, toggleTheme, openWelcomeModal } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,6 +21,7 @@ const Header = () => {
     { name: 'Stack', href: '#tech-wave' },
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
+    { name: 'Certificates', href: '#certificates' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -80,12 +81,37 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Action Controls: Theme Switcher & Resume CTA */}
-        <div className="flex items-center gap-3">
+        {/* Action Controls: Socials, Theme Switcher & Resume CTA */}
+        <div className="flex items-center gap-2.5">
+          {/* GitHub Header Link */}
+          <a
+            href="https://github.com/Adityakamble89"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub: @Adityakamble89"
+            className="hidden sm:inline-flex p-2 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:text-accent hover:border-accent transition-all"
+            aria-label="GitHub Profile"
+          >
+            <Github className="w-4 h-4" />
+          </a>
+
+          {/* LinkedIn Header Link */}
+          <a
+            href="https://www.linkedin.com/in/aditya-kamble-051a84213/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn Profile"
+            className="hidden sm:inline-flex p-2 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:text-accent hover:border-accent transition-all"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin className="w-4 h-4 text-sky-400" />
+          </a>
+
           {/* Framer Motion Theme Switcher */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
+            title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
             className="relative p-2 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:text-accent hover:border-accent transition-all focus:outline-none focus:ring-2 focus:ring-accent/50"
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -113,9 +139,19 @@ const Header = () => {
             </AnimatePresence>
           </button>
 
+          {/* Open Theme Customizer Modal */}
+          <button
+            onClick={openWelcomeModal}
+            aria-label="Customize Theme Window"
+            title="Choose Theme Window"
+            className="hidden sm:inline-flex p-2 rounded-xl bg-surface-elevated border border-surface-border text-muted-fg hover:text-accent hover:border-accent transition-all"
+          >
+            <Palette className="w-4 h-4" />
+          </button>
+
           {/* Quick Resume Link */}
           <a
-            href="mailto:aadityakamble405@gmail.com"
+            href="mailto:aadityakamble89@gmail.com"
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-semibold rounded-xl bg-accent/10 border border-accent/40 text-accent hover:bg-accent hover:text-black transition-all duration-300 shadow-sm"
           >
             <span>Let's Talk</span>
@@ -153,9 +189,53 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
+
+              <div className="pt-3 border-t border-surface-border flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://github.com/Adityakamble89"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-surface border border-surface-border text-fg"
+                    aria-label="GitHub 1"
+                  >
+                    <Github className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://github.com/Adityakamble23"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-surface border border-surface-border text-fg"
+                    aria-label="GitHub 2"
+                  >
+                    <Github className="w-4 h-4 text-emerald-400" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/aditya-kamble-051a84213/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-surface border border-surface-border text-sky-400"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                </div>
+
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    openWelcomeModal();
+                  }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-xs font-mono text-fg"
+                >
+                  <Palette className="w-3.5 h-3.5 text-accent" />
+                  <span>Theme Window</span>
+                </button>
+              </div>
+
               <div className="pt-2">
                 <a
-                  href="mailto:aadityakamble405@gmail.com"
+                  href="mailto:aadityakamble89@gmail.com"
                   className="flex items-center justify-center gap-2 w-full py-2.5 text-xs font-mono font-bold rounded-xl bg-accent text-black"
                 >
                   <span>Connect via Email</span>
@@ -171,3 +251,4 @@ const Header = () => {
 };
 
 export default Header;
+

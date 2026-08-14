@@ -166,7 +166,7 @@ const Footer = () => {
 
   const handleCopyEmail = (e) => {
     e.preventDefault();
-    navigator.clipboard.writeText('aadityakamble405@gmail.com');
+    navigator.clipboard.writeText('aadityakamble89@gmail.com');
     setCopied(true);
     
     // Trigger celebratory micro-confetti
@@ -225,15 +225,15 @@ const Footer = () => {
           </p>
 
           {/* Magnetic CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-5">
             
             {/* Primary Email Magnetic CTA */}
             <MagneticButton
-              href="mailto:aadityakamble405@gmail.com"
+              href="mailto:aadityakamble89@gmail.com"
               className="px-8 py-4 rounded-2xl bg-accent text-black font-mono text-sm font-bold tracking-tight hover:bg-accent-hover hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
             >
               <Mail className="w-4 h-4" />
-              <span>aadityakamble405@gmail.com</span>
+              <span>aadityakamble89@gmail.com</span>
               <ArrowUpRight className="w-4 h-4" />
             </MagneticButton>
 
@@ -257,7 +257,7 @@ const Footer = () => {
 
             {/* LinkedIn Magnetic Button */}
             <MagneticButton
-              href="https://linkedin.com/in/aadityakamble"
+              href="https://www.linkedin.com/in/aditya-kamble-051a84213/"
               className="px-6 py-4 rounded-2xl bg-surface-elevated border border-surface-border text-fg font-mono text-xs font-semibold hover:border-accent hover:text-accent"
             >
               <Linkedin className="w-4 h-4 text-sky-400" />
@@ -265,13 +265,23 @@ const Footer = () => {
               <ArrowUpRight className="w-3.5 h-3.5 text-muted-fg" />
             </MagneticButton>
 
-            {/* GitHub Magnetic Button */}
+            {/* Primary GitHub Magnetic Button */}
             <MagneticButton
-              href="https://github.com/aadityakamble"
+              href="https://github.com/Adityakamble89"
               className="px-6 py-4 rounded-2xl bg-surface-elevated border border-surface-border text-fg font-mono text-xs font-semibold hover:border-accent hover:text-accent"
             >
               <Github className="w-4 h-4" />
-              <span>GitHub</span>
+              <span>GitHub (89)</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-muted-fg" />
+            </MagneticButton>
+
+            {/* Secondary GitHub Magnetic Button */}
+            <MagneticButton
+              href="https://github.com/Adityakamble23"
+              className="px-6 py-4 rounded-2xl bg-surface-elevated border border-surface-border text-fg font-mono text-xs font-semibold hover:border-accent hover:text-accent"
+            >
+              <Github className="w-4 h-4 text-emerald-400" />
+              <span>GitHub (23)</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-muted-fg" />
             </MagneticButton>
 
@@ -308,13 +318,13 @@ const Footer = () => {
 
         <div>
           <h4 className="font-mono text-xs text-muted-fg uppercase tracking-wider mb-4 font-semibold">
-            Academic Track
+            Track & Credentials
           </h4>
           <ul className="space-y-2.5 text-muted-fg">
+            <li><a href="#certificates" className="hover:text-accent transition-colors">Verified Certificates (5)</a></li>
+            <li><a href="#certificates" className="hover:text-accent transition-colors">master.dev Credentials</a></li>
             <li><a href="#education" className="hover:text-accent transition-colors">B.Tech in CSE (2022–25)</a></li>
             <li><a href="#education" className="hover:text-accent transition-colors">Diploma in CE (2020–22)</a></li>
-            <li><a href="#education" className="hover:text-accent transition-colors">D Y Patil University</a></li>
-            <li><a href="#education" className="hover:text-accent transition-colors">Distinction Records</a></li>
           </ul>
         </div>
 
@@ -324,18 +334,23 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2.5 text-muted-fg">
             <li>
-              <a href="mailto:aadityakamble405@gmail.com" className="hover:text-accent transition-colors flex items-center gap-1">
-                <span>Email Aditya</span> <ArrowUpRight className="w-3 h-3 text-muted-fg" />
+              <a href="mailto:aadityakamble89@gmail.com" className="hover:text-accent transition-colors flex items-center gap-1">
+                <span>aadityakamble89@gmail.com</span> <ArrowUpRight className="w-3 h-3 text-muted-fg" />
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/in/aadityakamble" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
+              <a href="https://www.linkedin.com/in/aditya-kamble-051a84213/" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
                 <span>LinkedIn Profile</span> <ArrowUpRight className="w-3 h-3 text-muted-fg" />
               </a>
             </li>
             <li>
-              <a href="https://github.com/aadityakamble" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
-                <span>GitHub Repos</span> <ArrowUpRight className="w-3 h-3 text-muted-fg" />
+              <a href="https://github.com/Adityakamble89" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
+                <span>GitHub (@Adityakamble89)</span> <ArrowUpRight className="w-3 h-3 text-muted-fg" />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Adityakamble23" target="_blank" rel="noreferrer" className="hover:text-accent transition-colors flex items-center gap-1">
+                <span>GitHub (@Adityakamble23)</span> <ArrowUpRight className="w-3 h-3 text-muted-fg" />
               </a>
             </li>
           </ul>

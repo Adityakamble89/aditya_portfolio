@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ArrowDown, Code2, Database, Server, Sparkles, Terminal, Copy, Check } from 'lucide-react';
+import { ArrowDown, Code2, Database, Server, Sparkles, Terminal, Copy, Check, Github, Linkedin, ExternalLink } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 const Hero = () => {
@@ -119,7 +119,7 @@ const Hero = () => {
   );
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('aadityakamble405@gmail.com');
+    navigator.clipboard.writeText('aadityakamble89@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -166,7 +166,7 @@ const Hero = () => {
           </p>
 
           {/* CTAs & Quick Actions */}
-          <div className="hero-cta flex flex-wrap items-center gap-4 mb-10">
+          <div className="hero-cta flex flex-wrap items-center gap-3.5 mb-10">
             <a
               href="#projects"
               data-cursor="view"
@@ -189,10 +189,32 @@ const Hero = () => {
               ) : (
                 <>
                   <Copy className="w-4 h-4 text-muted-fg" />
-                  <span>aadityakamble405@gmail.com</span>
+                  <span>aadityakamble89@gmail.com</span>
                 </>
               )}
             </button>
+
+            {/* Quick Hero Social Badges */}
+            <div className="flex items-center gap-2 pl-1">
+              <a
+                href="https://github.com/Adityakamble89"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Primary GitHub: @Adityakamble89"
+                className="p-3.5 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:border-accent hover:text-accent transition-all"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aditya-kamble-051a84213/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn Profile"
+                className="p-3.5 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:border-accent hover:text-accent transition-all"
+              >
+                <Linkedin className="w-4 h-4 text-sky-400" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Terminal Meta Pills */}

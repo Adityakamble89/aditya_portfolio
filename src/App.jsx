@@ -7,13 +7,15 @@ import { ThemeProvider } from './context/ThemeContext';
 import CanvasBackground from './components/layout/CanvasBackground';
 import CustomCursor from './components/layout/CustomCursor';
 import Header from './components/layout/Header';
+import ThemeWelcomeModal from './components/layout/ThemeWelcomeModal';
 import Hero from './components/sections/Hero';
 import TechWave from './components/sections/TechWave';
 import Stats from './components/sections/Stats';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
-import Projects from './components/sections/Projects';
 import Education from './components/sections/Education';
+import Certificates from './components/sections/Certificates';
+import Projects from './components/sections/Projects';
 import Footer from './components/sections/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -59,6 +61,9 @@ function App() {
         {/* Navigation & Theme Toggle */}
         <Header />
 
+        {/* Theme Selection Startup Modal */}
+        <ThemeWelcomeModal />
+
         {/* Main Content Sections */}
         <main className="relative z-10">
           <Hero />
@@ -67,6 +72,7 @@ function App() {
           <About />
           <Experience />
           <Education />
+          <Certificates />
           <Projects />
           <Footer />
         </main>

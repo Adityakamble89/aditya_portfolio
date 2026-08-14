@@ -42,7 +42,7 @@ const PROJECTS = [
       { label: 'DB Query Latency', val: '< 35ms' },
       { label: 'Aggregation Depth', val: '7 Pipeline Stages' },
     ],
-    github: 'https://github.com/aadityakamble',
+    github: 'https://github.com/Adityakamble89',
     live: '#',
   },
   {
@@ -66,7 +66,7 @@ const PROJECTS = [
       { label: 'Evaluation Matrix', val: 'Multi-Rubric LLM' },
       { label: 'Async Concurrency', val: 'FastAPI Workers' },
     ],
-    github: 'https://github.com/aadityakamble',
+    github: 'https://github.com/Adityakamble89',
     live: '#',
   },
   {
@@ -90,7 +90,7 @@ const PROJECTS = [
       { label: 'Audit Trail', val: 'Immutable Logs' },
       { label: 'Tenancy', val: 'Multi-Tenant' },
     ],
-    github: 'https://github.com/aadityakamble',
+    github: 'https://github.com/Adityakamble23',
     live: '#',
   },
 ];
@@ -254,7 +254,7 @@ const Projects = () => {
                     <span>View Repository</span>
                   </a>
                   <a
-                    href="mailto:aadityakamble405@gmail.com?subject=Inquiry%20regarding%20Backend%20Architecture"
+                    href="mailto:aadityakamble89@gmail.com?subject=Inquiry%20regarding%20Backend%20Architecture"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-black font-mono text-xs font-bold hover:bg-accent-hover hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-300"
                   >
                     <span>Discuss Implementation</span>
