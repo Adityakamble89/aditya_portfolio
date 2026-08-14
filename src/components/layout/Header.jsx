@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Terminal, ArrowUpRight, Menu, X, Github, Linkedin, Palette } from 'lucide-react';
+import { Sun, Moon, Terminal, ArrowUpRight, Menu, X, Palette } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
@@ -57,15 +57,6 @@ const Header = () => {
           </span>
         </a>
 
-        {/* Live Availability Status (Desktop) */}
-        <div className="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-elevated border border-surface-border text-xs font-mono text-muted-fg">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-          </span>
-          <span>Open for High-Scale Backend Roles</span>
-        </div>
-
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
@@ -81,32 +72,8 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Action Controls: Socials, Theme Switcher & Resume CTA */}
+        {/* Action Controls: Theme Switcher & Resume CTA */}
         <div className="flex items-center gap-2.5">
-          {/* GitHub Header Link */}
-          <a
-            href="https://github.com/Adityakamble89"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub: @Adityakamble89"
-            className="hidden sm:inline-flex p-2 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:text-accent hover:border-accent transition-all"
-            aria-label="GitHub Profile"
-          >
-            <Github className="w-4 h-4" />
-          </a>
-
-          {/* LinkedIn Header Link */}
-          <a
-            href="https://www.linkedin.com/in/aditya-kamble-051a84213/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn Profile"
-            className="hidden sm:inline-flex p-2 rounded-xl bg-surface-elevated border border-surface-border text-fg hover:text-accent hover:border-accent transition-all"
-            aria-label="LinkedIn Profile"
-          >
-            <Linkedin className="w-4 h-4 text-sky-400" />
-          </a>
-
           {/* Framer Motion Theme Switcher */}
           <button
             onClick={toggleTheme}
@@ -191,42 +158,13 @@ const Header = () => {
               ))}
 
               <div className="pt-3 border-t border-surface-border flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <a
-                    href="https://github.com/Adityakamble89"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-surface border border-surface-border text-fg"
-                    aria-label="GitHub 1"
-                  >
-                    <Github className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="https://github.com/Adityakamble23"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-surface border border-surface-border text-fg"
-                    aria-label="GitHub 2"
-                  >
-                    <Github className="w-4 h-4 text-emerald-400" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/aditya-kamble-051a84213/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-surface border border-surface-border text-sky-400"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                </div>
-
+                <span className="font-mono text-xs text-muted-fg">aditya.kamble()</span>
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
                     openWelcomeModal();
                   }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-xs font-mono text-fg"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-xs font-mono text-fg hover:text-accent hover:border-accent transition-all"
                 >
                   <Palette className="w-3.5 h-3.5 text-accent" />
                   <span>Theme Window</span>

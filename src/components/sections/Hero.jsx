@@ -135,11 +135,14 @@ const Hero = () => {
         {/* LEFT COLUMN: High-Impact Typography & Narrative */}
         <div className="lg:col-span-7 flex flex-col justify-center z-10 text-left">
           
-          {/* Status Badge */}
+          {/* Live Availability Status Badge */}
           <div className="hero-badge inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-elevated border border-surface-border w-fit mb-6">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+            </span>
             <span className="font-mono text-xs text-muted-fg tracking-wide">
-              SYSTEM STATUS: <span className="text-accent font-semibold">OPTIMIZED & RUNNING</span>
+              Open for High-Scale Backend Roles
             </span>
           </div>
 
