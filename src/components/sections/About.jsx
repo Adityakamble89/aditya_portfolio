@@ -45,12 +45,12 @@ const ENGINEERING_PILLARS = [
     highlights: ['Hierarchical RBAC (6-Tier)', 'Stateless JWT & Refresh Rotation', 'Immutable Audit Trails'],
   },
   {
-    title: 'Containerization & CI/CD Pipelines',
-    subtitle: 'DevOps & Cloud Deployments',
-    icon: Layers,
-    badge: 'Infrastructure',
-    desc: 'Building Docker multi-stage container images, configuring environment isolation, standardizing automated testing with Git pipelines, and integrating cloud asset buckets like Cloudinary and AWS.',
-    highlights: ['Multi-stage Docker Builds', 'Automated Health Checks', 'Cloud Storage & CDN Pipelines'],
+    title: 'Git Version Control & Workflow Architecture',
+    subtitle: 'Git & GitHub Collaboration',
+    icon: GitBranch,
+    badge: 'Workflows',
+    desc: 'Structuring organized Git branching strategies, clean commit conventions, pull request workflows, modular project architecture, automated pre-commit linting, and collaborative development on GitHub.',
+    highlights: ['Git Branching & Release Workflows', 'Clean Modular Architecture', 'GitHub Collaboration & Review'],
   },
 ];
 
@@ -61,11 +61,11 @@ const SKILL_CATEGORIES = [
   },
   {
     name: 'Databases & Storage',
-    skills: ['MongoDB (Aggregations)', 'Mongoose ODM', 'PostgreSQL', 'Redis Caching', 'Data Modeling'],
+    skills: ['MongoDB (Aggregations)', 'Mongoose ODM', 'PostgreSQL', 'Data Modeling', 'Query Indexing'],
   },
   {
-    name: 'Security & DevOps',
-    skills: ['JWT / Auth Rotation', 'RBAC Permissioning', 'Docker Containers', 'Git CI/CD', 'Multer Streaming'],
+    name: 'Security & Workflows',
+    skills: ['JWT / Auth Rotation', 'RBAC Permissioning', 'Git & GitHub', 'Multer Streaming', 'API Security'],
   },
   {
     name: 'Tooling & Protocols',

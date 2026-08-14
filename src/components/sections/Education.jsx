@@ -23,7 +23,7 @@ const ACADEMICS = [
       'OS & Multi-Threading',
       'Distributed Systems',
       'Algorithms & DSA',
-      'Cloud Architecture',
+      'Computer Networks',
     ],
     highlights: [
       'Architected end-to-end full-stack and high-throughput backend capstone systems.',

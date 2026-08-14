@@ -19,9 +19,9 @@ const EXPERIENCES = [
       'Engineered core RESTful APIs with Node.js, Express, and MongoDB, handling secure transactional data and audit trails.',
       'Designed and deployed fine-grained Role-Based Access Control (RBAC) and stateless JWT authentication with automated token refresh.',
       'Created advanced MongoDB aggregation pipelines for complex analytics, batch processing, and inventory reporting.',
-      'Containerized backend services with Docker for standardized CI/CD deployment pipelines.',
+      'Maintained version-controlled backend architecture, clean modular code, and team collaboration via Git and GitHub.',
     ],
-    tech: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT/RBAC', 'Docker', 'PharmaSense Arch'],
+    tech: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT/RBAC', 'Git & GitHub', 'PharmaSense Arch'],
   },
   {
     role: 'Flutter Developer Intern',

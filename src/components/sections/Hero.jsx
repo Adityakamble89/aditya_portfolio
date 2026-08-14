@@ -161,7 +161,7 @@ const Hero = () => {
           {/* Subtitle / Engineer Bio */}
           <p className="hero-subtext text-base sm:text-lg text-muted-fg max-w-xl font-normal leading-relaxed mb-8">
             Hi, I'm <strong className="text-fg font-semibold">Aditya Kamble</strong>. Backend Software Engineer
-            crafting high-throughput microservices, robust aggregation pipelines, and secure cloud infrastructure.
+            crafting high-throughput microservices, robust aggregation pipelines, and scalable backend systems.
             Specializing in Node.js, Express, MongoDB, and FastAPI.
           </p>
 
@@ -222,7 +222,7 @@ const Hero = () => {
             <span className="text-xs font-mono text-muted-fg mr-2 flex items-center gap-1">
               <Terminal className="w-3.5 h-3.5 text-accent" /> stack:
             </span>
-            {['Node.js', 'Express', 'FastAPI', 'MongoDB', 'PostgreSQL', 'Docker', 'JWT/RBAC'].map((item) => (
+            {['Node.js', 'Express', 'FastAPI', 'MongoDB', 'PostgreSQL', 'Git & CI/CD', 'JWT/RBAC'].map((item) => (
               <span
                 key={item}
                 className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-surface border border-surface-border text-muted-fg hover:text-fg hover:border-accent/40 transition-colors"
